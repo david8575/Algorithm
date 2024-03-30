@@ -11,9 +11,9 @@ def preFix(nums):
 
 # 2차원 합 배열
 def preFix2(nums):
-    preFixSum = [[0] * (n+1) for _ in range(n+1)]
-    for i in range(1, n+1):
-        for j in range(1, n+1):
+    preFixSum = [[0] * (len(nums[0])+1) for _ in range(len(nums[0])+1)]
+    for i in range(1, len(nums[0])+1):
+        for j in range(1, len(nums[0])+1):
             preFixSum[i][j] = preFixSum[i][j-1] + preFixSum[i-1][j] - preFixSum[i-1][j-1] + nums[i][j]
     return preFixSum
 # 2차원 구간 합
