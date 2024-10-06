@@ -6,4 +6,9 @@ def quickSort(nums):
     right = [num for num in nums if num > pivot]
     mid = [num for num in nums if num == pivot]
 
-    return quickSort(left) + quickSort(mid) + quickSort(right)
+    return quickSort(left) + mid + quickSort(right)
+
+list1 = list(map(int, input().split()))
+print(list1)
+list1 = quickSort(list1)
+print(list1)
