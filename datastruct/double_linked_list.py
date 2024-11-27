@@ -10,5 +10,3 @@ class doubleLinkedList:
         self.tail = None
         self.head.next = self.tail
         self.tail.prev = self.head
-    def append(data):
-        
